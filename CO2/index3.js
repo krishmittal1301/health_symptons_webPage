@@ -20,6 +20,8 @@ function updateAgeValue() {
 
 
 function submitForm() {
+    var km = document.getElementById("temp");
+    km.textContent = 'We are trying to find out your disease ............'
 
     const symptoms = document.querySelectorAll('input[name="symptoms[]"]:checked');
 
@@ -44,14 +46,22 @@ function submitForm() {
             // Process the results returned from the backend
             console.log(data);
 
-            const chartPath = 'chart.png';
-            if (chartPath) {
-                const chartContainer = document.getElementById('chartContainer');
-                chartContainer.innerHTML = '';  // Clear previous content
+            const chartContainer = document.getElementById('chartContainer');
+            chartContainer.innerHTML = '';  // Clear previous content
+
+            console.log("YUP")
+            if (data.top_diseases && data.probabilities) {
                 const chartImg = document.createElement('img');
-                chartImg.src = `${chartPath}`;
+                chartImg.src = `data:image/png;base64,${data.image_data}`;
                 chartContainer.appendChild(chartImg);
+            } else {
+                // If no data is provided, you can handle it as needed
+                console.log("NOPS")
+                const placeholderText = document.createElement('p');
+                placeholderText.textContent = 'No data available';
+                chartContainer.appendChild(placeholderText);
             }
+            km.textContent = '';
         })
 
 }
