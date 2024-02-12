@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "MyFont";
+    src: url("fonts/Lovelyn.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'ContentFont';
+    src: url('fonts/Caudex.ttf') format('truetype');
+}
+
+body {
+    font-family: 'ContentFont', sans-serif;
+    background-color: rgb(255, 246, 234);
+    background-image: linear-gradient(140deg, #ffeeee, #ddefbb);
+}
+
+.fdiv {
+    font-family: 'MyFont', sans-serif;
+}
+
+.question-card {
+    background-color: #fff;
+    padding: 40px;
+    margin: 50px 40px 50px 40px;
+
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

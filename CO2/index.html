@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1 id="my-element" class="top-font">Health Harmony Hub</h1>
+    <nav class="bg-gray-800 navbar">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-2">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-8">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                            <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium ml-0"
+                                aria-current="page">Home</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                onclick="openHealthPage()">Health</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                onclick="openBotPage()">Personal
+                                Advisor</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Community</a>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 mx-4">
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                        onclick="openLoginModal()">Login</a>
+                    <a href="#" onclick="openSignUpModal()"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">SignUp</a>
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pb-3 pt-2">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+                    aria-current="page">Home</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Health</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                    onclick="openBotPage()">Personal
+                    Advisor</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Community</a>
+            </div>
+        </div>
+    </nav>
+    <div id="loginModal" class="modal">
+        <div class="modal-content mx-auto">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <!-- Add your login form here -->
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" class="border border-sky-500 my-4" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="border border-sky-500 my-4" required>
+
+                <button type="submit" class="my-4 p-2 mx-28">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="SignUpModal" class="modal">
+        <div class="modal-content mx-auto">
+            <span class="close" onclick="closeSignUpModal()">&times;</span>
+            <!-- Add your login form here -->
+            <form>
+                <label for="EmailId">Email-Id:</label>
+                <input type="text" id="EmailId" name="EmailId" class="border border-sky-500 my-4" required>
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" class="border border-sky-500 my-4" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="border border-sky-500 my-4" required>
+
+                <button type="submit" class="my-4 p-2 mx-28">SignUp</button>
+
+            </form>
+        </div>
+    </div>
+    <img src="bg.webp" alt="" class="top-image">
+    <div class="grid grid-cols-2  order-last mt-8">
+        <div class="text-5xl m-4 mt-32">
+            Get a Personal Health Advisor with The help of our ChatBot.....
+        </div>
+        <div class="w-100  float-end">
+            <img src="background.jpg" class="imagemiddle shadow-2xl anim" alt="">
+            <div class="m-10"></div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-2  order-last mt-8">
+        <div class="w-100  mx-10 my-10">
+            <img src="disease.jpg" class="shadow-2xl anim" alt="">
+        </div>
+        <div class="text-3xl m-4 mt-32 text-slate-500">
+            Know Your disease by entering your sympton
+        </div>
+    </div>
+
+    <div class="helping">
+        <p class=" text-3xl  mx-6">
+            Our Services Will help you.
+        </p>
+        <p>
+            <button class=" againbtn m-6 p-3  text-2xl" onclick="openHealthPage()">See Our Services ></button>
+            <button class="m-6 p-3  text-2xl againbtn" onclick="openBotPage()">Personal Assistent ></button>
+        </p>
+    </div>
+
+    <div class="grid grid-cols-2  order-last mt-8">
+        <div class="text-5xl m-4 mt-32">
+            Get your health Updates Based on your city carbon footprint value.
+        </div>
+        <div class="w-100  float-end">
+            <img src="carbonfootprint.jpg" class=" shadow-2xl anim" alt="">
+            <div class="m-10"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

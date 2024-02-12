@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index3.css">
+
+</head>
+
+<body>
+    <div class="pt-20 text-5xl ml-20">
+        We are Here for your Health Updates............
+    </div>
+    <div class="bg-white border-2  ml-40 md:w-max lg:w-1/2 mb-60 mt-20">
+        <div class="text-4xl my-10 ml-10  text-slate-500 ">
+            Check Your Symptons.
+        </div>
+        <div class="px-10 fdiv text-2xl  text-slate-500">
+            Take a short (3 min) symptom assessment. The information you give is safe and won’t be shared. Your results
+            will include:
+            <ul class="list-disc px-12">
+                <li>
+                    Possible causes of sympton.
+                </li>
+                <li>
+                    Precautions to be taken.
+                </li>
+            </ul>
+        </div>
+        <div class="px-2">
+
+            <div class="question-card" id="question1">
+                <h2>Question 1</h2>
+                <div>What is your age?</div>
+                <!-- <input type="checkbox" name="ageInput" id="ageInput"> -->
+                <input type="range" id="ageInput" name="ageInput" min="1" max="100" oninput="updateAgeValue()">
+                <span id="ageValue">50</span>
+                <div class="mt-4">
+                    <button class="btun" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <div class="question-card" id="question2" style="display: none;">
+                <h2>Question 2</h2>
+                <div>What is your gender?</div>
+                <input type="radio" name="gender" id="Male" class="ml-4">
+                <label for="Male">Male</label>
+
+                <input type="radio" name="gender" id="Female" class="ml-4">
+                <label for="Female">Female</label>
+
+                <input type="radio" name="gender" id="3rdgender" class="ml-4">
+                <label for="3rdgender">Others</label>
+
+                <div class="mt-4">
+                    <button onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <div class="question-card" id="question3" style="display: none;">
+                <h2>Question 3</h2>
+                <div>Are you felling itching ?</div>
+                <input type="radio" name="Yes" id="Yes" class="ml-4">
+                <label for="Yes">Yes</label>
+
+                <input type="radio" name="No" id="No" class="ml-4">
+                <label for="No">No</label>
+
+                <input type="radio" name="d'know" id="d'know" class="ml-4">
+                <label for="d'know">Prefer not to say</label>
+                <div class="mt-4">
+                    <button onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <div class="question-card" id="question4" style="display: none;">
+                <h2>Question 4</h2>
+                <div>Are you felling skin rash ?</div>
+                <input type="radio" name="Yes" id="Yes" class="ml-4">
+                <label for="Yes">Yes</label>
+
+                <input type="radio" name="No" id="No" class="ml-4">
+                <label for="No">No</label>
+
+                <input type="radio" name="d'know" id="d'know" class="ml-4">
+                <label for="d'know">Prefer not to say</label>
+                <div class="mt-4">
+                    <button onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <div class="question-card" id="question5" style="display: none;">
+                <h2>Question 5</h2>
+                <div>Are you felling vomiting ?</div>
+                <input type="radio" name="Yes" id="Yes" class="ml-4">
+                <label for="Yes">Yes</label>
+
+                <input type="radio" name="No" id="No" class="ml-4">
+                <label for="No">No</label>
+
+                <input type="radio" name="d'know" id="d'know" class="ml-4">
+                <label for="d'know">Prefer not to say</label>
+                <div class="mt-4">
+                    <button onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <div class="question-card" id="question6" style="display: none;">
+                <h2>Question 6</h2>
+                <div>Are you felling fatigue ?</div>
+                <input type="radio" name="Yes" id="Yes" class="ml-4">
+                <label for="Yes">Yes</label>
+
+                <input type="radio" name="No" id="No" class="ml-4">
+                <label for="No">No</label>
+
+                <input type="radio" name="d'know" id="d'know" class="ml-4">
+                <label for="d'know">Prefer not to say</label>
+                <div class="mt-4">
+                    <button onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <div class="question-card" id="question7" style="display: none;">
+                <h2>Question 7</h2>
+                <div>Are you felling cough ?</div>
+                <input type="radio" name="Yes" id="Yes" class="ml-4">
+                <label for="Yes">Yes</label>
+
+                <input type="radio" name="No" id="No" class="ml-4">
+                <label for="No">No</label>
+
+                <input type="radio" name="d'know" id="d'know" class="ml-4">
+                <label for="d'know">Prefer not to say</label>
+                <div class="mt-4">
+                    <button onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <div class="question-card" id="question8" style="display: none;">
+                <h2>Question 8</h2>
+                <div>Are you felling breatheless ?</div>
+                <input type="radio" name="Yes" id="Yes" class="ml-4">
+                <label for="Yes">Yes</label>
+
+                <input type="radio" name="No" id="No" class="ml-4">
+                <label for="No">No</label>
+
+                <input type="radio" name="d'know" id="d'know" class="ml-4">
+                <label for="d'know">Prefer not to say</label>
+                <div class="mt-4">
+                    <button onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <div class="question-card" id="question9" style="display: none;">
+                <h2>Question 9</h2>
+                <div>Are you felling sweating ?</div>
+                <input type="radio" name="Yes" id="Yes" class="ml-4">
+                <label for="Yes">Yes</label>
+
+                <input type="radio" name="No" id="No" class="ml-4">
+                <label for="No">No</label>
+
+                <input type="radio" name="d'know" id="d'know" class="ml-4">
+                <label for="d'know">Prefer not to say</label>
+                <div class="mt-4">
+                    <button onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <div class="question-card" id="question10" style="display: none;">
+                <h2>Question 10</h2>
+                <div>Are you felling anxiety?</div>
+                <input type="radio" name="Yes" id="Yes" class="ml-4">
+                <label for="Yes">Yes</label>
+
+                <input type="radio" name="No" id="No" class="ml-4">
+                <label for="No">No</label>
+
+                <input type="radio" name="d'know" id="d'know" class="ml-4">
+                <label for="d'know">Prefer not to say</label>
+            </div>
+
+        </div>
+
+        <div class="px-3">
+            <div class="text-2xl">Some Common Symptons:</div>
+            <div>
+                <form>
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom1" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom1">nodal_skin_eruptions</label>
+                    </div>
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom2" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom2">continuous_sneezing</label>
+                    </div>
+
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom3" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom3">shivering</label>
+                    </div>
+
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom4" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom4">chills</label>
+                    </div>
+
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom5" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom5">joint_pain</label>
+                    </div>
+
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom6" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom6">stomach_pain</label>
+                    </div>
+
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom7" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom7">acidity</label>
+                    </div>
+
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom8" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom8">ulcers_on_tongue</label>
+                    </div>
+
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom9" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom9">muscle_wasting</label>
+                    </div>
+
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom10" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom10">burning_micturition</label>
+                    </div>
+
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom11" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom11">spotting_ urination</label>
+                    </div>
+
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom12" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom12">weight_gain</label>
+                    </div>
+
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom13" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom13">cold_hands_and_feets</label>
+                    </div>
+
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom14" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom14">mood_swings</label>
+                    </div>
+
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom15" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom15">weight_loss</label>
+                    </div>
+
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom16" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom16">restlessness</label>
+                    </div>
+
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom17" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom17">lethargy</label>
+                    </div>
+
+                    <div class="symptom-option-container">
+                        <input type="checkbox" id="symptom18" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                        <label for="symptom18">patches_in_throat</label>
+                    </div>
+
+                    <input type="checkbox" id="symptom19" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                    <label for="symptom19">irregular_sugar_level</label>
+
+                    <input type="checkbox" id="symptom20" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                    <label for="symptom20">cough</label>
+
+                    <input type="checkbox" id="symptom21" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                    <label for="symptom21">high_fever</label>
+
+                    <input type="checkbox" id="symptom22" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                    <label for="symptom22">sunken_eyes</label>
+
+                    <input type="checkbox" id="symptom23" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                    <label for="symptom23">breathlessness</label>
+
+                    <input type="checkbox" id="symptom24" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                    <label for="symptom24">dehydration</label>
+
+                    <input type="checkbox" id="symptom25" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                    <label for="symptom25">indigestion</label>
+
+                    <input type="checkbox" id="symptom26" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                    <label for="symptom26">headache</label>
+
+                    <input type="checkbox" id="symptom27" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                    <label for="symptom27">yellowish_skin</label>
+
+                    <input type="checkbox" id="symptom28" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                    <label for="symptom28">dark_urine</label>
+
+                    <input type="checkbox" id="symptom29" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                    <label for="symptom29">high_fever</label>
+
+                    <input type="checkbox" id="symptom30" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                    <label for="symptom30">nausea</label>
+
+                    <input type="checkbox" id="symptom31" name="symptoms[]" class="ml-8 my-4 symptom-option ">
+                    <label for="symptom31">loss_of_appetite</label>
+
+
+                    <!-- Add more symptoms as needed -->
+                </form>
+                <button onclick="submitForm()">
+                    Submit
+                </button>
+            </div>
+        </div>
+
+        <div id="chartContainer">
+            <img src="chart.png" alt="">
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index3.js"></script>
+
+</body>
+
+</html>
