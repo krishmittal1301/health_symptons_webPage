@@ -1,5 +1,5 @@
 let currentQuestion = 1;
-const serverUrl = 'http://172.16.13.244:5000';
+const serverUrl = 'https://6bf8-14-139-34-151.ngrok-free.app';
 function nextQuestion() {
     const currentQuestionElement = document.getElementById(`question${currentQuestion}`);
     const nextQuestionElement = document.getElementById(`question${currentQuestion + 1}`);
