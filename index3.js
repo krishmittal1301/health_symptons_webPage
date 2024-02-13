@@ -1,5 +1,5 @@
 let currentQuestion = 1;
-const serverUrl = 'http://localhost:5000';
+const serverUrl = 'http://172.16.13.244:5000';
 function nextQuestion() {
     const currentQuestionElement = document.getElementById(`question${currentQuestion}`);
     const nextQuestionElement = document.getElementById(`question${currentQuestion + 1}`);

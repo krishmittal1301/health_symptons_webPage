@@ -1,5 +1,5 @@
 // Replace 'YOUR_SERVER_URL' with the actual URL where your Flask app is running
-const serverUrl = 'http://localhost:5000';
+const serverUrl = 'http://172.16.13.244:5000';
 
 var $messages = $('.messages-content'),
     d, h, m,
