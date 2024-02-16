@@ -1,5 +1,5 @@
 // Replace 'YOUR_SERVER_URL' with the actual URL where your Flask app is running
-const serverUrl = 'https://6bf8-14-139-34-151.ngrok-free.app';
+const serverUrl = 'https://bdfb-14-139-34-101.ngrok-free.app';
 
 var $messages = $('.messages-content'),
     d, h, m,
